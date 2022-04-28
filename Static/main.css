@@ -1,0 +1,27 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.screen-container {
+    display: flex; /* creates flex box w/ contents*/
+    justify-content: center; /* prevents left-screen from sticking to the very left-end */
+    padding-top: 50px /* prevents screen from sticking to nav bar */
+}
+
+.left-screen {
+    background-color: green;
+    margin-right: 30px;
+    width: 700px;
+    height: 2000px
+}
+
+.right-screen {
+    background-color: lime;
+    width: 300px;
+    height: 600px;
+    left: 80%; /* prevents right screen from overlapping w/ leftscreen */
+    position: fixed; /* pins right screen during scrolling/
+}
