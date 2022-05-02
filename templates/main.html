@@ -188,9 +188,6 @@
         <span class="feed_name_txt"> {{ feed.user_id }}</span>
       </div>
 
-
-
-
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -212,7 +209,6 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
 
       <div class="feed_icon">
         <div>
@@ -266,77 +262,30 @@
     </div>
 
       <!-- Recommend Box Starts-->
+
     <div class="recommend_box">
       <span style="color: gray"> 회원님을 위한 추천</span>
       <span style="font-size: 12px"> 모두 보기 </span>
     </div>
+
+
+    {% for recommendation in recommendations_list %}
     <div>
         <div class="feed_name" style="justify-content: space-between">
         <div class="profile_box">
           <img class="profile_img"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mac_Miller_2017.jpg/440px-Mac_Miller_2017.jpg">
+               src="{{ recommendation.profile_image }}">
         </div>
         <div class="name_content">
-          <span class="feed_name_txt"> cheesy_mac </span>
-          <span class="name_content_txt"> Malcolm McCormick</span>
-        </div>
-        <a class="link_txt">
-          Follow
-        </a>
-      </div>
-        <div class="feed_name" style="justify-content: space-between">
-        <div class="profile_box">
-          <img class="profile_img"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mac_Miller_2017.jpg/440px-Mac_Miller_2017.jpg">
-        </div>
-        <div class="name_content">
-          <span class="feed_name_txt"> cheesy_mac </span>
-          <span class="name_content_txt"> Malcolm McCormick</span>
-        </div>
-        <a class="link_txt">
-          Follow
-        </a>
-      </div>
-        <div class="feed_name" style="justify-content: space-between">
-        <div class="profile_box">
-          <img class="profile_img"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mac_Miller_2017.jpg/440px-Mac_Miller_2017.jpg">
-        </div>
-        <div class="name_content">
-          <span class="feed_name_txt"> cheesy_mac </span>
-          <span class="name_content_txt"> Malcolm McCormick</span>
-        </div>
-        <a class="link_txt">
-          Follow
-        </a>
-      </div>
-        <div class="feed_name" style="justify-content: space-between">
-        <div class="profile_box">
-          <img class="profile_img"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mac_Miller_2017.jpg/440px-Mac_Miller_2017.jpg">
-        </div>
-        <div class="name_content">
-          <span class="feed_name_txt"> cheesy_mac </span>
-          <span class="name_content_txt"> Malcolm McCormick</span>
-        </div>
-        <a class="link_txt">
-          Follow
-        </a>
-      </div>
-        <div class="feed_name" style="justify-content: space-between">
-        <div class="profile_box">
-          <img class="profile_img"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mac_Miller_2017.jpg/440px-Mac_Miller_2017.jpg">
-        </div>
-        <div class="name_content">
-          <span class="feed_name_txt"> cheesy_mac </span>
-          <span class="name_content_txt"> Malcolm McCormick</span>
+          <span class="feed_name_txt"> {{ recommendation.user_id }} </span>
+          <span class="name_content_txt"> {{ recommendation.real_name }}</span>
         </div>
         <a class="link_txt">
           Follow
         </a>
       </div>
     </div>
+    {% endfor %}
       <!-- Recommend Box Ends-->
 
   </div>

@@ -9,5 +9,10 @@ class Feed(models.Model):
     user_id = models.TextField()
     like_count = models.IntegerField()
 
+class Recommendations(models.Model):
+    profile_image = models.TextField()
+    real_name = models.TextField()
+    user_id = models.TextField()
+
 
 
